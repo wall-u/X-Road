@@ -55,7 +55,7 @@ module.exports = {
   },
   sections: {
     serviceClientsTab: {
-      selector: '//div[contains(@class, "v-tabs-bar__content")]//a[contains(@class, "v-tab--active") and contains(text(), "service clients")]',
+      selector: '//div[contains(@class, "xrd-view-common") and .//*[contains(@class, "v-tab--active") and contains(text(), "service clients")]]',
       locateStrategy: 'xpath' },
     wizardSelectServices: {
       selector: '//div[contains(@class, "view-wrap")]//div[contains(@class, "v-stepper"]//span[contains(@class, "primary") and contains(text(), "2"]'
