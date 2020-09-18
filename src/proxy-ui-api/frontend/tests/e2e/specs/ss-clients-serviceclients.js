@@ -82,7 +82,7 @@ module.exports = {
 
     // Verify SOAP service client when it has access permissions
     clientInfo.openServiceClientsTab();
-    browser.waitForElementVisible(serviceClientsPage.section.serviceClientsTab);
+    // browser.waitForElementVisible(serviceClientsPage.section.serviceClientsTab);
     browser.waitForElementVisible('//tr[td[contains(text(),"TestOrg")]]');
 
     // Remove WSDL service description
