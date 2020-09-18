@@ -79,7 +79,7 @@ module.exports = {
     browser.assert.containsText(mainPage.elements.snackBarMessage, 'Access rights added successfully');
     mainPage.closeSnackbar();
     operationDetails.close();
-    browser.waitForElementVisible(serviceClientsPage.section.serviceClientsTab);
+    browser.waitForElementVisible(clientServices);
 
     // Verify SOAP service client when it has access permissions
 
