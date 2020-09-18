@@ -79,10 +79,12 @@ module.exports = {
     browser.assert.containsText(mainPage.elements.snackBarMessage, 'Access rights added successfully');
     mainPage.closeSnackbar();
     operationDetails.close();
+    browser.waitForElementVisible(serviceClientsPage.section.serviceClientsTab);
 
     // Verify SOAP service client when it has access permissions
+
     clientInfo.openServiceClientsTab();
-    // browser.waitForElementVisible(serviceClientsPage.section.serviceClientsTab);
+    browser.waitForElementVisible('//div[contains(@class, "xrd-view-common") and .//*[contains(@class, "v-tab--active") and contains(text(), "service clients")]]');
     browser.waitForElementVisible('//tr[td[contains(text(),"TestOrg")]]');
 
     // Remove WSDL service description
