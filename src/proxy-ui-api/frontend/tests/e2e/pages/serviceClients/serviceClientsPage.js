@@ -52,6 +52,9 @@ module.exports = {
     searchField: {
       selector: '//input[contains(@data-test, "search-service-client")]',
       locateStrategy: 'xpath' },
+    serviceClientsTab: {
+      selector: '//div[contains(@class, "xrd-view-common") and .//*[contains(@class, "v-tab--active") and contains(text(), "service clients")]]',
+      locateStrategy: 'xpath' },
   },
   sections: {
     serviceClientsTab: {
