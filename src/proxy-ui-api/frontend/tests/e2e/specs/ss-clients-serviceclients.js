@@ -80,11 +80,10 @@ module.exports = {
     mainPage.closeSnackbar();
     operationDetails.close();
     browser.waitForElementVisible(clientInfo.elements.serviceClientsTab);
-    browser.waitForElementVisible('//div[contains(@class, "v-tabs-bar__content")]//a[contains(@class, "v-tab") and contains(text(), "service clients")]');
 
     // Verify SOAP service client when it has access permissions
     clientInfo.openServiceClientsTab();
-    browser.waitForElementVisible('//div[contains(@class, "xrd-view-common") and .//*[contains(@class, "v-tab--active") and contains(text(), "service clients")]]');
+    browser.waitForElementVisible(serviceClientsPage.section.serviceClientsTab);
     browser.waitForElementVisible('//tr[td[contains(text(),"TestOrg")]]');
 
     // Remove WSDL service description
