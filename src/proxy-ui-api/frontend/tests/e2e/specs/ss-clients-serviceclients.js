@@ -82,9 +82,8 @@ module.exports = {
     browser.waitForElementVisible(clientServices);
 
     // Verify SOAP service client when it has access permissions
-
     clientInfo.openServiceClientsTab();
-    browser.waitForElementVisible('//div[contains(@class, "xrd-view-common") and .//*[contains(@class, "v-tab--active") and contains(text(), "service clients")]]');
+    browser.waitForElementVisible('//div[contains(@class, "xrd-view-common") and .//*[contains(@class, "v-tab--active") and contains(text(), "service clients")]]', 10000);
     browser.waitForElementVisible('//tr[td[contains(text(),"TestOrg")]]');
 
     // Remove WSDL service description
