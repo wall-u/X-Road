@@ -85,7 +85,7 @@ module.exports = {
     clientInfo.openServiceClientsTab();
     browser.pause(5000);
 
-    browser.element('//div[contains(@class, "xrd-view-common")]/node()', (result) => {
+    browser.element('xpath', '//div[contains(@class, "xrd-view-common")]/node()', (result) => {
       console.log(result.value);
     })
 
