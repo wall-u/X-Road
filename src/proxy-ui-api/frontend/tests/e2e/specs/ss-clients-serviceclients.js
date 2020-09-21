@@ -83,6 +83,12 @@ module.exports = {
 
     // Verify SOAP service client when it has access permissions
     clientInfo.openServiceClientsTab();
+    browser.pause(5000);
+
+    browser.element('//div[contains(@class, "xrd-view-common")]/node()', (result) => {
+      console.log(result.value);
+    })
+
     browser.waitForElementVisible(serviceClientsPage.section.serviceClientsTab);
     browser.waitForElementVisible('//tr[td[contains(text(),"TestOrg")]]');
 
